@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "564302903677",
+    "firebase_url": "https://hereheroemergency.firebaseio.com",
+    "project_id": "hereheroemergency",
+    "storage_bucket": "hereheroemergency.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:564302903677:android:bf86172f5e3a10db",
+        "android_client_info": {
+          "package_name": "com.example.bryan.hereheroemergency"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "564302903677-jnfhb0if40abqoecccudr87vlsbn12cu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0Hk0npXMymbkXOdlMwQ2ucBbBp1w3LzQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
