@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">HereHero Emergency</string>
+    <string name="Request1">HereHero is now</string>
+    <string name="Request2">Processing your Request</string>
+    <string name="Request3">for General Information</string>
+    <string name="clickhere">Click Here</string>
 </resources>
