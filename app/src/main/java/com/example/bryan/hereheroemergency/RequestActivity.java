@@ -4,19 +4,34 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class RequestActivity extends AppCompatActivity {
 
-    TextView clickhere_Button;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_request);
         Intent intent = getIntent();
-        clickhere_Button = findViewById(R.id.clickherebutton);
-        
+
+        Button closeButton = findViewById(R.id.close_button);
+        Button reportButton = findViewById(R.id.report_button);
+        TextView infoButton= findViewById(R.id.clickhere_button);
+
+        closeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+
+
+        });
+
     }
 
 }
