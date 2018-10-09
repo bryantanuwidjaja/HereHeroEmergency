@@ -32,6 +32,16 @@ public class RequestActivity extends AppCompatActivity {
 
         });
 
+        infoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), InformationActivity.class);
+                startActivity(intent);
+            }
+
+
+        });
+
     }
 
 }

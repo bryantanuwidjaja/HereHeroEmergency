@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = getIntent();
 
         final Button panicButton = findViewById(R.id.panic_button);
+        final Button infoButton = findViewById(R.id.info_button);
 
         panicButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -26,5 +27,15 @@ public class MainActivity extends AppCompatActivity {
 
 
         });
+        infoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), InformationActivity.class);
+                startActivity(intent);
+            }
+
+
+        });
+
     }
 }
