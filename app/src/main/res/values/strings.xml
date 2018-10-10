@@ -4,4 +4,18 @@
     <string name="Request2">Processing your Request</string>
     <string name="Request3">for General Information</string>
     <string name="clickhere">Click Here</string>
+
+    <string-array name="bloodtype">
+        <item>Blood Type</item>
+        <item>A+</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B-</item>
+        <item>AB+</item>
+        <item>AB-</item>
+        <item>O+</item>
+        <item>O-</item>
+    </string-array>
+
+
 </resources>

@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
         final Button panicButton = findViewById(R.id.panic_button);
         final Button infoButton = findViewById(R.id.info_button);
+        final Button accountButton = findViewById(R.id.account_Button);
 
         panicButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,6 +32,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), InformationActivity.class);
+                startActivity(intent);
+            }
+
+
+        });
+
+        accountButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), AccountActivity.class);
                 startActivity(intent);
             }
 

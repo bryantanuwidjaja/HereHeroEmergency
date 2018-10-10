@@ -6,4 +6,5 @@
     <color name="colorBackground">#CE2029</color>
     <color name="colorBlack">#000000</color>
     <color name="colorRed">#CE2029</color>
+    <color name="colorButton">#BCBABE</color>
 </resources>
