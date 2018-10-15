@@ -26,10 +26,10 @@ import java.util.Calendar;
 public class AccountActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     private static final String TAG = "AccountActivity";
 
-    String nameDB;
-    String dateDB;
-    String addressDB;
-    int phoneDB;
+    String nameSP;
+    String dateSP;
+    String addressSP;
+    int phoneSP;
     EditText editText_name;
     EditText editText_address;
     EditText editText_phone;
@@ -92,20 +92,20 @@ public class AccountActivity extends AppCompatActivity implements AdapterView.On
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                nameDB = editText_name.getText().toString();
-                dateDB = textView_DiplayDate.getText().toString();
-                addressDB = editText_address.getText().toString();
+                nameSP = editText_name.getText().toString();
+                dateSP = textView_DiplayDate.getText().toString();
+                addressSP = editText_address.getText().toString();
                 int selectedPosition = spinner.getSelectedItemPosition();
-                phoneDB = Integer.parseInt(editText_phone.getText().toString());
+                phoneSP = Integer.parseInt(editText_phone.getText().toString());
 
                 SharedPreferences prefs = getSharedPreferences("mydata",MODE_PRIVATE);
                 SharedPreferences.Editor editor = prefs.edit();
 
-                editor.putString("Full Name",nameDB);
-                editor.putString("Date of Birth",dateDB);
-                editor.putString("Address",addressDB);
+                editor.putString("Full Name",nameSP);
+                editor.putString("Date of Birth",dateSP);
+                editor.putString("Address",addressSP);
                 editor.putInt("spinnerSelection", selectedPosition);
-                editor.putInt("Phone Number", phoneDB);
+                editor.putInt("Phone Number", phoneSP);
                 editor.apply();
                 Toast.makeText(AccountActivity.this, "Data Saved", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
