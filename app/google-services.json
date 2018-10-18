@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "564302903677-k3fkiq36j7pa9va554bof05253q81937.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bryan.hereheroemergency",
+            "certificate_hash": "c9a276bc7661d127cae516ba8472b1b60e26f73c"
+          }
+        },
+        {
           "client_id": "564302903677-jnfhb0if40abqoecccudr87vlsbn12cu.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "564302903677-jnfhb0if40abqoecccudr87vlsbn12cu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2
