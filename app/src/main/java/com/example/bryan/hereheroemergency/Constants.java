@@ -10,5 +10,6 @@ public class Constants {
     static final int PHONE = 0;
     static final String LOCATION = "location";
 
+    static final String REPORT = "REPORT";
 
 }

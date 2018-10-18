@@ -17,5 +17,13 @@
         <item>O-</item>
     </string-array>
 
+    <string-array name="listEmergency">
+        <item>Type Emergency</item>
+        <item>Fire Incident</item>
+        <item>Vehicle Accident</item>
+        <item>Terrorist Attack</item>
+        <item>Harrassment</item>
+        <item>Thief</item>
+    </string-array>
 
 </resources>

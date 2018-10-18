@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
         final Button panicButton = findViewById(R.id.panic_button);
         final Button infoButton = findViewById(R.id.info_button);
         final Button accountButton = findViewById(R.id.account_Button);
+        final Button button_Report = findViewById(R.id.button_MainActivity_ReportEmergency);
         final CheckBox policeCheckBox = findViewById(R.id.police_checkBox);
         final CheckBox medicCheckBox = findViewById(R.id.medic_checkBox);
 
@@ -101,7 +102,6 @@ public class MainActivity extends AppCompatActivity {
                     String location = exactLocation;
                     Panic panic = new Panic(panicID,nameDBdefault,dateDBdefault,addressDBdefault,bloodtype,container,location,police,medic);
                     addPanicToDatabase(panicID, panic);
-
                 }
 
             }
@@ -125,6 +125,14 @@ public class MainActivity extends AppCompatActivity {
             }
 
 
+        });
+
+        button_Report.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (getApplicationContext(), ReportActivity.class);
+                startActivity(intent);
+            }
         });
 
     }
