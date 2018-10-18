@@ -1,5 +1,6 @@
 package com.example.bryan.hereheroemergency;
 
+import android.accounts.Account;
 import android.app.DatePickerDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -30,6 +31,7 @@ public class AccountActivity extends AppCompatActivity implements AdapterView.On
     String dateDB;
     String addressDB;
     int phoneDB;
+    String bloodType;
     EditText editText_name;
     EditText editText_address;
     EditText editText_phone;
@@ -37,7 +39,6 @@ public class AccountActivity extends AppCompatActivity implements AdapterView.On
 
     TextView textView_DiplayDate;
     DatePickerDialog.OnDateSetListener mDateSetListener;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +61,6 @@ public class AccountActivity extends AppCompatActivity implements AdapterView.On
         spinner.setOnItemSelectedListener(this);
 
 
-        //SharedPref Load Item.
         SharedPreferences prefs = getSharedPreferences("mydata",MODE_PRIVATE);
         String nameDBdefault = prefs.getString("Full Name","");
         editText_name.setText(nameDBdefault);
@@ -69,7 +69,9 @@ public class AccountActivity extends AppCompatActivity implements AdapterView.On
         String addressDBdefault = prefs.getString("Address","");
         editText_address.setText(addressDBdefault);
         spinner.setSelection(prefs.getInt("spinnerSelection",0));
+        int bloodtype = prefs.getInt("spinnerSelection",0);
         int phoneDBdefault = prefs.getInt("Phone Number",0);
+
         int container = (prefs.getInt("Phone Number",0));
         Log.d(TAG, "container : " + container);
         if(container == 0){
@@ -97,6 +99,7 @@ public class AccountActivity extends AppCompatActivity implements AdapterView.On
                 addressDB = editText_address.getText().toString();
                 int selectedPosition = spinner.getSelectedItemPosition();
                 phoneDB = Integer.parseInt(editText_phone.getText().toString());
+                bloodType = spinner.getSelectedItem().toString();
 
                 SharedPreferences prefs = getSharedPreferences("mydata",MODE_PRIVATE);
                 SharedPreferences.Editor editor = prefs.edit();
