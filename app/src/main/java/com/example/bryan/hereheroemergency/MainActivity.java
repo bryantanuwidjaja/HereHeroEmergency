@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         final Button button_Report = findViewById(R.id.button_MainActivity_ReportEmergency);
         final CheckBox policeCheckBox = findViewById(R.id.police_checkBox);
         final CheckBox medicCheckBox = findViewById(R.id.medic_checkBox);
-
+        final Button button_ListNumber = findViewById(R.id.button_MainActivity_ListNumber);
         policeCheckBox.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -131,6 +131,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent (getApplicationContext(), ReportActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        button_ListNumber.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (getApplicationContext(), ListNumberActivity.class);
+
                 startActivity(intent);
             }
         });
