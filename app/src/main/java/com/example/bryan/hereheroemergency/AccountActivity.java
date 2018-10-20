@@ -101,6 +101,7 @@ public class AccountActivity extends AppCompatActivity implements AdapterView.On
                 phoneSP = Integer.parseInt(editText_phone.getText().toString());
 
 
+
                 SharedPreferences prefs = getSharedPreferences("mydata",MODE_PRIVATE);
                 SharedPreferences.Editor editor = prefs.edit();
 

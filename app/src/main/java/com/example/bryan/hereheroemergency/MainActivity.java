@@ -50,13 +50,16 @@ public class MainActivity extends AppCompatActivity {
         final String bloodtype;
         bloodtype = SpinnerBloodtype(bloodtypeint);
         final int container = (prefs.getInt("Phone Number",0));
-
+        final String emergencyNumber = prefs.getString("Number","118");
         final Button panicButton = findViewById(R.id.panic_button);
         final Button infoButton = findViewById(R.id.info_button);
         final Button accountButton = findViewById(R.id.account_Button);
         final Button button_Report = findViewById(R.id.button_MainActivity_ReportEmergency);
+        final Button button_ListNumber = findViewById(R.id.button_MainActivity_ListNumbers);
         final CheckBox policeCheckBox = findViewById(R.id.police_checkBox);
         final CheckBox medicCheckBox = findViewById(R.id.medic_checkBox);
+
+        Log.d(TAG, "onCreate: "+emergencyNumber);
 
         policeCheckBox.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -131,6 +134,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent (getApplicationContext(), ReportActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        button_ListNumber.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent  (getApplicationContext(),ListNumberActivity.class);
                 startActivity(intent);
             }
         });
