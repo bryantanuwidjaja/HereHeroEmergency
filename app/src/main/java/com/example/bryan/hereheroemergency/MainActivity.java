@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationManager;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -26,6 +27,7 @@ import java.util.UUID;
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
     static final int REQUEST_LOCATION = 1;
+    static final int REQUEST_CALL = 2;
     LocationManager locationManager;
 
     Boolean police=false;
@@ -41,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Intent intent = getIntent();
+        final String number = "96124606";
 
         SharedPreferences prefs = getSharedPreferences("mydata",MODE_PRIVATE);
         final String nameDBdefault = prefs.getString("Full Name","");
@@ -54,8 +57,11 @@ public class MainActivity extends AppCompatActivity {
         final Button panicButton = findViewById(R.id.panic_button);
         final Button infoButton = findViewById(R.id.info_button);
         final Button accountButton = findViewById(R.id.account_Button);
+        //final Button button_call = findViewById(R.id.button_MainActivity_Call);
         final CheckBox policeCheckBox = findViewById(R.id.police_checkBox);
         final CheckBox medicCheckBox = findViewById(R.id.medic_checkBox);
+
+
 
         policeCheckBox.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -127,6 +133,7 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
+
     }
 
     @NonNull
@@ -189,6 +196,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults)
     {
@@ -197,7 +205,6 @@ public class MainActivity extends AppCompatActivity {
             case REQUEST_LOCATION:
                 Location();
                 break;
-
         }
     }
 
@@ -223,4 +230,18 @@ public class MainActivity extends AppCompatActivity {
                 });
     }
 
+    public void button_MainActivity_Call(View view) {
+        String number = "96124606";
+        if(ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) !=
+                PackageManager.PERMISSION_GRANTED)
+        {
+            ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.CALL_PHONE},REQUEST_LOCATION);
+            Toast.makeText(this,"Please Try Calling Again",Toast.LENGTH_LONG).show();
+
+        }else{
+            Intent intent = new Intent(Intent.ACTION_CALL);
+            intent.setData(Uri.parse("tel:"+number));
+            startActivity(intent);
+        }
+    }
 }
