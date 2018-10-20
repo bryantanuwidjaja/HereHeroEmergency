@@ -27,6 +27,7 @@ import java.util.UUID;
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
     static final int REQUEST_LOCATION = 1;
+    static final int REQUEST_CALL =2;
     LocationManager locationManager;
 
     Boolean police=false;
@@ -251,9 +252,8 @@ public class MainActivity extends AppCompatActivity {
         if(ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) !=
                 PackageManager.PERMISSION_GRANTED)
         {
-            ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.CALL_PHONE},REQUEST_LOCATION);
-            Toast.makeText(this,"Please Try Calling Again",Toast.LENGTH_LONG).show();
-
+            ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.CALL_PHONE},REQUEST_CALL);
+            Toast.makeText(this,"Please Press Call Again",Toast.LENGTH_LONG).show();
         }else{
             Intent intent = new Intent(Intent.ACTION_CALL);
             intent.setData(Uri.parse("tel:"+number));
