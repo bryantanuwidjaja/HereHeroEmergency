@@ -48,21 +48,26 @@ public class ListNumbersAdapter extends BaseAdapter {
                 view = inflater.inflate(R.layout.list_custom_row_layout, viewGroup, false);
 
 
-            viewHolder.label = (TextView) view.findViewById(R.id.label);
-            viewHolder.radioButton = (RadioButton) view.findViewById(R.id.radio_button);
+            viewHolder.country = (TextView) view.findViewById(R.id.textView_ListNumberLayout_Country);
+            viewHolder.number = (TextView) view.findViewById(R.id.textView_ListNumberLayout_Number);
+
 
             view.setTag(viewHolder);
         } else
             viewHolder = (ViewHolder) view.getTag();
 
-        viewHolder.label.setText(listNumbers.getCountry());
-        viewHolder.label.setTag(i);
+        viewHolder.country.setText(listNumbers.getCountry());
+        viewHolder.country.setTag(i);
+
+        viewHolder.number.setText(listNumbers.getCountry());
+        viewHolder.number.setTag(i);
 
         return view;
     }
     private class ViewHolder {
-        private TextView label;
-        private RadioButton radioButton;
+        private TextView country;
+        private TextView number;
+
     }
 
 }

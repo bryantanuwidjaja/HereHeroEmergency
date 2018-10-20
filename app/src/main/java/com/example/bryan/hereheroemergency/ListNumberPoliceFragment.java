@@ -10,11 +10,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
+
 import java.util.ArrayList;
 
 public class ListNumberPoliceFragment extends Fragment {
     private Context context;
     private ArrayList<ListNumbers> arrayListNumbers;
+    private ListNumbersAdapter adapter;
 
     public ListNumberPoliceFragment(){
 
@@ -36,7 +38,7 @@ public class ListNumberPoliceFragment extends Fragment {
     private void loadListView(View view) {
         ListView listView = (ListView) view.findViewById(R.id.list_view);
 
-        //listView.setAdapter(adapter);
+        listView.setAdapter(adapter);
     }
 
 }
