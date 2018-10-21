@@ -28,7 +28,8 @@
         <activity android:name=".TsunamiActivity" />
         <activity android:name=".CarAccidentActivity" />
         <activity android:name=".CPRActivity" />
-        <activity android:name=".TerroristActivity"></activity>
+        <activity android:name=".TerroristActivity" />
+        <activity android:name=".HouseFireActivity"></activity>
     </application>
 
 </manifest>

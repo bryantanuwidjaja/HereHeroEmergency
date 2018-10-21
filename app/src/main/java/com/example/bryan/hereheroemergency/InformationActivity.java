@@ -64,7 +64,8 @@ public class InformationActivity extends AppCompatActivity {
         button_HouseFire.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent (getApplicationContext(),HouseFireActivity.class);
+                startActivity(intent);
             }
         });
     }
