@@ -31,7 +31,8 @@ public class InformationActivity extends AppCompatActivity {
         button_Tsunami.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent (getApplicationContext(),TsunamiActivity.class);
+                startActivity(intent);
             }
         });
 

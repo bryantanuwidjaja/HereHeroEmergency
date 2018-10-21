@@ -2,12 +2,10 @@ package com.example.bryan.hereheroemergency;
 
 import android.support.constraint.ConstraintLayout;
 import android.support.v4.view.PagerAdapter;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.content.Context;
 
@@ -15,7 +13,7 @@ public class EarthquakeSlider extends PagerAdapter {
     Context context;
     LayoutInflater inflater;
 
-    public int[] images_Earthquake = {
+    public int[] images_Slider = {
             R.drawable.ic_person,
             R.drawable.ic_person,
             R.drawable.ic_person,
@@ -25,7 +23,7 @@ public class EarthquakeSlider extends PagerAdapter {
             R.drawable.ic_person
     };
 
-    public String [] title_Earthquake ={
+    public String [] title_Slider ={
             "Get away from glass, large furniture, and other hazards, if possible.",
             "Drop to your hands and knees under a sturdy table or desk.",
             "Protect your head and neck from falling debris.",
@@ -35,7 +33,7 @@ public class EarthquakeSlider extends PagerAdapter {
             "Inspect the building for structural damage and hazards."
     };
 
-    public String[] description_Earthquake = {
+    public String[] description_Slider = {
             "In the first few seconds after the shaking starts, try to quickly move away from anything that could fall and injure you. Get low and walk or crawl away from hazards such as windows, cabinets, televisions, and bookcases.",
             "Look for a sturdy piece of furniture, such as a solid table, that can offer cover from falling objects. Get down on your hands and knees, and crouch under the desk or table until the shaking stops.",
             "If possible, grab a pillow, sofa cushion, or another object to shield your face and head. If there’s nothing nearby to use as a shield, cover your face, head, and neck with your hands and arms.",
@@ -48,7 +46,7 @@ public class EarthquakeSlider extends PagerAdapter {
     public EarthquakeSlider(EarthquakeActivity context) { this.context = context; }
 
     @Override
-    public int getCount (){ return title_Earthquake.length;}
+    public int getCount (){ return title_Slider.length;}
 
     @Override
     public boolean isViewFromObject (View view, Object object){
@@ -58,14 +56,14 @@ public class EarthquakeSlider extends PagerAdapter {
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
         inflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
-        View view = inflater.inflate(R.layout.slider_earthquake,container,false);
-        ConstraintLayout layoutslide = (ConstraintLayout) view.findViewById(R.id.sliderEarthquakeLayout);
-        ImageView imgslide = (ImageView)  view.findViewById(R.id.imageView_Earthquake);
-        TextView txttitle= (TextView) view.findViewById(R.id.textView_TitleEarthquake);
-        TextView description = (TextView) view.findViewById(R.id.textView_DescriptionEarthquake);
-        imgslide.setImageResource(images_Earthquake[position]);
-        txttitle.setText(title_Earthquake[position]);
-        description.setText(description_Earthquake[position]);
+        View view = inflater.inflate(R.layout.slider_information,container,false);
+        ConstraintLayout layoutslide = (ConstraintLayout) view.findViewById(R.id.sliderLayout);
+        ImageView imgslide = (ImageView)  view.findViewById(R.id.imageView_Slider);
+        TextView txttitle= (TextView) view.findViewById(R.id.textView_TitleSlider);
+        TextView description = (TextView) view.findViewById(R.id.textView_DescriptionSlider);
+        imgslide.setImageResource(images_Slider[position]);
+        txttitle.setText(title_Slider[position]);
+        description.setText(description_Slider[position]);
         container.addView(view);
         return view;
     }

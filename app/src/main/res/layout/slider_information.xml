@@ -5,11 +5,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/sliderEarthquakeLayout">
+    android:id="@+id/sliderLayout">
 
 
     <ImageView
-        android:id="@+id/imageView_Earthquake"
+        android:id="@+id/imageView_Slider"
         android:layout_width="349dp"
         android:layout_height="198dp"
         android:layout_marginEnd="8dp"
@@ -21,7 +21,7 @@
         app:srcCompat="@mipmap/ic_launcher" />
 
     <TextView
-        android:id="@+id/textView_TitleEarthquake"
+        android:id="@+id/textView_TitleSlider"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -30,10 +30,10 @@
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_Earthquake" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView_Slider" />
 
     <TextView
-        android:id="@+id/textView_DescriptionEarthquake"
+        android:id="@+id/textView_DescriptionSlider"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -42,5 +42,5 @@
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_TitleEarthquake" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_TitleSlider" />
 </android.support.constraint.ConstraintLayout>
