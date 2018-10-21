@@ -48,7 +48,8 @@ public class InformationActivity extends AppCompatActivity {
         button_CPR.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent (getApplicationContext(),CPRActivity.class);
+                startActivity(intent);
             }
         });
 
