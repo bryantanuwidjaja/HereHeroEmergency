@@ -56,7 +56,8 @@ public class InformationActivity extends AppCompatActivity {
         button_Terrorist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent (getApplicationContext(), TerroristActivity.class);
+                startActivity(intent);
             }
         });
 
