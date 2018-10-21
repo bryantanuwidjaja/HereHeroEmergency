@@ -4,15 +4,15 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class EarthquakeActivity extends AppCompatActivity {
+public class CarAccidentActivity extends AppCompatActivity {
     private ViewPager viewPager;
-    private EarthquakeSlider adapter;
+    private CarAccidentSlider adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_earthquake);
+        setContentView(R.layout.activity_car_accident);
         viewPager = (ViewPager) findViewById(R.id.viewPager);
-        adapter = new EarthquakeSlider(this);
+        adapter = new CarAccidentSlider(this);
         viewPager.setAdapter(adapter);
     }
 }

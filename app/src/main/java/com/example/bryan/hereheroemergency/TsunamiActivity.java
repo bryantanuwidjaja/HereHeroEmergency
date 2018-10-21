@@ -11,7 +11,7 @@ public class TsunamiActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tsunami);
-        viewPager = (ViewPager) findViewById(R.id.viewPager_Tsunami);
+        viewPager = (ViewPager) findViewById(R.id.viewPager);
         adapter = new TsunamiSlider(this);
         viewPager.setAdapter(adapter);
     }

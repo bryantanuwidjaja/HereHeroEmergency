@@ -25,7 +25,8 @@
         <activity android:name=".ReportActivity" />
         <activity android:name=".ListNumbersActivity" />
         <activity android:name=".EarthquakeActivity" />
-        <activity android:name=".TsunamiActivity"></activity>
+        <activity android:name=".TsunamiActivity" />
+        <activity android:name=".CarAccidentActivity"></activity>
     </application>
 
 </manifest>
