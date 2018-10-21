@@ -3,7 +3,6 @@
     package="com.example.bryan.hereheroemergency">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-
     <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
@@ -24,7 +23,8 @@
         <activity android:name=".InformationActivity" />
         <activity android:name=".AccountActivity" />
         <activity android:name=".ReportActivity" />
-        <activity android:name=".ListNumbersActivity"></activity>
+        <activity android:name=".ListNumbersActivity" />
+        <activity android:name=".EarthquakeActivity"></activity>
     </application>
 
 </manifest>
