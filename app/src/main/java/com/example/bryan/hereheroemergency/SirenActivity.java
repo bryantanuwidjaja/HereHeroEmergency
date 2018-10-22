@@ -1,5 +1,6 @@
 package com.example.bryan.hereheroemergency;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -42,6 +43,18 @@ public class SirenActivity extends AppCompatActivity {
             mySound.release();
             mySound = null;
             Log.d(TAG, "onCreate: out");
+        }
+    }
+    @Override
+    public void onBackPressed(){
+        if(mySound != null){
+            mySound.release();
+            Intent intent = new Intent (getApplicationContext(),MainActivity.class);
+            startActivity(intent);
+        }else
+        {
+            Intent intent = new Intent (getApplicationContext(),MainActivity.class);
+            startActivity(intent);
         }
     }
 
