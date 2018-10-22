@@ -1,10 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
-    <color name="colorBackground">#CE2029</color>
+    <color name="colorPrimary">#512DA8</color>
+    <color name="colorPrimaryDark">#673AB7</color>
+    <color name="colorAccent">#FF5722</color>
+    <color name="colorBackground">#F3E5F5</color>
     <color name="colorBlack">#000000</color>
     <color name="colorRed">#CE2029</color>
-    <color name="colorButton">#BCBABE</color>
+    <color name="colorButton">#F3E5F5</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorGrey">#D3D3D3</color>
+
+
+
+    <color name="reportLight">#FC6E51</color>
+    <color name="reportDark">#E9573F</color>
+    <color name="sirenLight">#ED5565</color>
+    <color name="sirenDark">#DA4453</color>
+    <color name="informationLight">#4FC1E9</color>
+    <color name="informationDark">#3BAFDA</color>
+    <color name="numbersLight">#509CEC</color>
+    <color name="numberDark">#4A89DC</color>
+
 </resources>

@@ -54,9 +54,9 @@ public class MainActivity extends AppCompatActivity {
         bloodtype = SpinnerBloodtype(bloodtypeint);
         final int container = (prefs.getInt("Phone Number",0));
 
-        final Button panicButton = findViewById(R.id.panic_button);
+        final Button panicButton = findViewById(R.id.button_MainActivity_Panic);
         final Button infoButton = findViewById(R.id.info_button);
-        final Button accountButton = findViewById(R.id.account_Button);
+        final Button accountButton = findViewById(R.id.button_MainActivity_Account);
         final Button button_Siren = findViewById(R.id.button_MainActivity_Siren);
         final Button button_Report = findViewById(R.id.button_MainActivity_ReportEmergency);
         final Button button_ListNumber = findViewById(R.id.button_MainActivity_ListNumber);
