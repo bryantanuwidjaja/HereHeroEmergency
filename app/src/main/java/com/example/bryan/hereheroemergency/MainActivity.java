@@ -57,12 +57,20 @@ public class MainActivity extends AppCompatActivity {
         final Button panicButton = findViewById(R.id.panic_button);
         final Button infoButton = findViewById(R.id.info_button);
         final Button accountButton = findViewById(R.id.account_Button);
+        final Button button_Siren = findViewById(R.id.button_MainActivity_Siren);
         final Button button_Report = findViewById(R.id.button_MainActivity_ReportEmergency);
         final Button button_ListNumber = findViewById(R.id.button_MainActivity_ListNumber);
         final CheckBox policeCheckBox = findViewById(R.id.police_checkBox);
         final CheckBox medicCheckBox = findViewById(R.id.medic_checkBox);
 
 
+        button_Siren.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (getApplicationContext(),SirenActivity.class);
+                startActivity(intent);
+            }
+        });
 
         policeCheckBox.setOnClickListener(new View.OnClickListener() {
             @Override

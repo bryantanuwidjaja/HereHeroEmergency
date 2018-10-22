@@ -29,7 +29,8 @@
         <activity android:name=".CarAccidentActivity" />
         <activity android:name=".CPRActivity" />
         <activity android:name=".TerroristActivity" />
-        <activity android:name=".HouseFireActivity"></activity>
+        <activity android:name=".HouseFireActivity" />
+        <activity android:name=".SirenActivity"></activity>
     </application>
 
 </manifest>
