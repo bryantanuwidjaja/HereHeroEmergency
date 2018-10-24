@@ -6,88 +6,408 @@
     android:layout_height="match_parent"
     tools:context=".InformationActivity">
 
-    <Button
-        android:id="@+id/button_InformationActivity_Earthquake"
-        android:layout_width="wrap_content"
-        android:layout_height="42dp"
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryDark">
+
+        <Button
+            android:id="@+id/button_NumberActivity_Back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/ic_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="General Information"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/button_NumberActivity_Back"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="40dp"
-        android:text="Earthquake"
+        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline37"
         app:layout_constraintEnd_toStartOf="@+id/guideline7"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/guideline48">
 
-    <Button
-        android:id="@+id/button_InformationActivity_Tsunami"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        <Button
+            android:id="@+id/button_InformationActivity_Earthquake"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/numbersLight"
+            android:elevation="6sp"
+            android:padding="6sp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/imageButton"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/ic_earthquake"
+            android:translationZ="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView15"
+            app:layout_constraintEnd_toEndOf="@+id/button_InformationActivity_Earthquake"
+            app:layout_constraintStart_toStartOf="@+id/button_InformationActivity_Earthquake"
+            app:layout_constraintTop_toTopOf="@+id/button_InformationActivity_Earthquake" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/numberDark"
+            android:paddingTop="5dp"
+            android:text="Earthquake"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="16dp"
+            android:translationZ="11dp"
+            app:layout_constraintBottom_toBottomOf="@+id/button_InformationActivity_Earthquake"
+            app:layout_constraintEnd_toEndOf="@+id/button_InformationActivity_Earthquake"
+            app:layout_constraintStart_toStartOf="@+id/button_InformationActivity_Earthquake" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="40dp"
-        android:text="Tsunami"
+        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline37"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/guideline48">
 
-    <Button
-        android:id="@+id/button_informationActivity_HouseFire"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        <Button
+            android:id="@+id/button_InformationActivity_Tsunami"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/numbersLight"
+            android:elevation="6sp"
+            android:padding="6sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:translationZ="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView16"
+            app:layout_constraintEnd_toEndOf="@+id/button_InformationActivity_Tsunami"
+            app:layout_constraintStart_toStartOf="@+id/button_InformationActivity_Tsunami"
+            app:layout_constraintTop_toTopOf="@+id/button_InformationActivity_Tsunami"
+            app:srcCompat="@drawable/ic_tsunami" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/numberDark"
+            android:paddingTop="5dp"
+            android:text="Tsunami"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="16dp"
+            android:translationZ="11dp"
+            app:layout_constraintBottom_toBottomOf="@+id/button_InformationActivity_Tsunami"
+            app:layout_constraintEnd_toEndOf="@+id/button_InformationActivity_Tsunami"
+            app:layout_constraintStart_toStartOf="@+id/button_InformationActivity_Tsunami" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="House Fire"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.586"
-        app:layout_constraintStart_toStartOf="@+id/guideline7"
-        app:layout_constraintTop_toBottomOf="@+id/button_InformationActivity_CPR" />
-
-    <Button
-        android:id="@+id/button_InformationActivity_CarAccident"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Car Accident"
+        app:layout_constraintBottom_toTopOf="@+id/guideline47"
         app:layout_constraintEnd_toStartOf="@+id/guideline7"
-        app:layout_constraintHorizontal_bias="0.574"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline37" />
+        app:layout_constraintTop_toTopOf="@+id/guideline37">
 
-    <Button
-        android:id="@+id/button_InformationActivity_CPR"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="CPR"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline7"
-        app:layout_constraintTop_toTopOf="@+id/guideline37" />
+        <Button
+            android:id="@+id/button_InformationActivity_CarAccident"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/numbersLight"
+            android:elevation="6sp"
+            android:padding="6sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button_InformationActivity_Terrorist"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:translationZ="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView17"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.451"
+            app:layout_constraintStart_toStartOf="@+id/button_InformationActivity_CarAccident"
+            app:layout_constraintTop_toTopOf="@+id/button_InformationActivity_CarAccident"
+            app:layout_constraintVertical_bias="0.466"
+            app:srcCompat="@drawable/ic_car" />
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/numberDark"
+            android:paddingTop="5dp"
+            android:text="Car Accident"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="16dp"
+            android:translationZ="11dp"
+            app:layout_constraintBottom_toBottomOf="@+id/button_InformationActivity_CarAccident"
+            app:layout_constraintEnd_toEndOf="@+id/button_InformationActivity_CarAccident"
+            app:layout_constraintStart_toStartOf="@+id/button_InformationActivity_CarAccident" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Terrorist Attack"
+        app:layout_constraintBottom_toTopOf="@+id/guideline47"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toTopOf="@+id/guideline37">
+
+        <Button
+            android:id="@+id/button_InformationActivity_CPR"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/numbersLight"
+            android:elevation="6sp"
+            android:padding="6sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:translationZ="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView18"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/button_InformationActivity_CPR"
+            app:srcCompat="@drawable/ic_cpr" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/numberDark"
+            android:paddingTop="5dp"
+            android:text="CPR"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="16dp"
+            android:translationZ="11dp"
+            app:layout_constraintBottom_toBottomOf="@+id/button_InformationActivity_CPR"
+            app:layout_constraintEnd_toEndOf="@+id/button_InformationActivity_CPR"
+            app:layout_constraintStart_toStartOf="@+id/button_InformationActivity_CPR" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline7"
-        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_InformationActivity_CarAccident" />
+        app:layout_constraintTop_toTopOf="@+id/guideline47">
+
+        <Button
+            android:id="@+id/button_InformationActivity_Terrorist"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/numbersLight"
+            android:elevation="6sp"
+            android:padding="6sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:translationZ="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView19"
+            app:layout_constraintEnd_toEndOf="@+id/button_InformationActivity_Terrorist"
+            app:layout_constraintStart_toStartOf="@+id/button_InformationActivity_Terrorist"
+            app:layout_constraintTop_toTopOf="@+id/button_InformationActivity_Terrorist"
+            app:srcCompat="@drawable/ic_terrorist" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/numberDark"
+            android:paddingTop="5dp"
+            android:text="Terrorist Attack"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="16dp"
+            android:translationZ="11dp"
+            app:layout_constraintBottom_toBottomOf="@+id/button_InformationActivity_Terrorist"
+            app:layout_constraintEnd_toEndOf="@+id/button_InformationActivity_Terrorist"
+            app:layout_constraintStart_toStartOf="@+id/button_InformationActivity_Terrorist" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toTopOf="@+id/guideline47">
+
+        <Button
+            android:id="@+id/button_informationActivity_HouseFire"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/numbersLight"
+            android:elevation="6sp"
+            android:padding="6sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.395" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/numberDark"
+            android:paddingTop="5dp"
+            android:text="House Fire"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="16dp"
+            android:translationZ="11dp"
+            app:layout_constraintBottom_toBottomOf="@+id/button_informationActivity_HouseFire"
+            app:layout_constraintEnd_toEndOf="@+id/button_informationActivity_HouseFire"
+            app:layout_constraintStart_toStartOf="@+id/button_informationActivity_HouseFire" />
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:translationZ="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView20"
+            app:layout_constraintEnd_toEndOf="@+id/button_informationActivity_HouseFire"
+            app:layout_constraintStart_toStartOf="@+id/button_informationActivity_HouseFire"
+            app:layout_constraintTop_toTopOf="@+id/button_informationActivity_HouseFire"
+            app:srcCompat="@drawable/ic_housefire" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline37"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.40" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline7"
@@ -98,9 +418,18 @@
         app:layout_constraintGuide_percent="0.5" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline37"
+        android:id="@+id/guideline47"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="165dp" />
+        app:layout_constraintGuide_percent="0.7" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline48"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="0dp"
+        app:layout_constraintGuide_percent="0.1" />
+
 </android.support.constraint.ConstraintLayout>
