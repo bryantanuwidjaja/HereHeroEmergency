@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Intent intent = getIntent();
-        final String number = "96124606";
+        final String number = "911";
 
         SharedPreferences prefs = getSharedPreferences("mydata",MODE_PRIVATE);
         final String nameDBdefault = prefs.getString("Full Name","");
