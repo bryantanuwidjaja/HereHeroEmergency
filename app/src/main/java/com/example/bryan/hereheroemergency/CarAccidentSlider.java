@@ -1,6 +1,7 @@
 package com.example.bryan.hereheroemergency;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.constraint.ConstraintLayout;
 import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
@@ -14,19 +15,19 @@ public class CarAccidentSlider extends PagerAdapter {
     LayoutInflater inflater;
 
     public int[] images_Slider = {
-            R.drawable.ic_person,
-            R.drawable.ic_person,
-            R.drawable.ic_person,
-            R.drawable.ic_person,
-            R.drawable.ic_person,
-            R.drawable.ic_person,
-            R.drawable.ic_person,
-            R.drawable.ic_person,
-            R.drawable.ic_person,
-            R.drawable.ic_person,
-            R.drawable.ic_person,
-            R.drawable.ic_person,
-            R.drawable.ic_person
+            R.drawable.car1,
+            R.drawable.car2,
+            R.drawable.car3,
+            R.drawable.car4,
+            R.drawable.car5,
+            R.drawable.car6,
+            R.drawable.car7,
+            R.drawable.car8,
+            R.drawable.car9,
+            R.drawable.car10,
+            R.drawable.car11,
+            R.drawable.car12,
+            R.drawable.car13
     };
 
     public String [] title_Slider ={
@@ -76,16 +77,33 @@ public class CarAccidentSlider extends PagerAdapter {
     public Object instantiateItem(ViewGroup container, int position) {
         inflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
         View view = inflater.inflate(R.layout.slider_information,container,false);
-        ConstraintLayout layoutslide = (ConstraintLayout) view.findViewById(R.id.sliderLayout);
-        ImageView imgslide = (ImageView)  view.findViewById(R.id.imageView_Slider);
-        TextView txttitle= (TextView) view.findViewById(R.id.textView_TitleSlider);
-        TextView description = (TextView) view.findViewById(R.id.textView_DescriptionSlider);
+        ConstraintLayout layoutslide =  view.findViewById(R.id.sliderLayout);
+        ImageView imgslide =   view.findViewById(R.id.imageView_Slider);
+        TextView txttitle=  view.findViewById(R.id.textView_TitleSlider);
+        TextView description =  view.findViewById(R.id.textView_DescriptionSlider);
+        layoutslide.setBackgroundColor(lst_backgroundcolor[position]);
         imgslide.setImageResource(images_Slider[position]);
         txttitle.setText(title_Slider[position]);
         description.setText(description_Slider[position]);
         container.addView(view);
         return view;
     }
+
+    public int[]  lst_backgroundcolor = {
+            Color.rgb(55,55,55),
+            Color.rgb(239,85,85),
+            Color.rgb(110,49,89),
+            Color.rgb(1,188,212),
+            Color.rgb(55,55,55),
+            Color.rgb(239,85,85),
+            Color.rgb(110,49,89),
+            Color.rgb(1,188,212),
+            Color.rgb(55,55,55),
+            Color.rgb(239,85,85),
+            Color.rgb(110,49,89),
+            Color.rgb(1,188,212),
+            Color.rgb(55,55,55)
+    };
 
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {

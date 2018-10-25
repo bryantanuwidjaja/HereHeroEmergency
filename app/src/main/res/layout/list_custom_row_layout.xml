@@ -26,6 +26,7 @@
         android:layout_weight="1"
         android:gravity="center_vertical"
         android:text="TextView"
+        android:textSize="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView_ListNumberLayout_Flags"
         app:layout_constraintTop_toTopOf="parent"
@@ -39,7 +40,7 @@
         android:layout_marginTop="8dp"
         android:layout_weight="1"
         android:gravity="center_vertical"
-
+        android:textStyle="bold"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView_ListNumberLayout_Country"

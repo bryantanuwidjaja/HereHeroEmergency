@@ -1,6 +1,7 @@
 package com.example.bryan.hereheroemergency;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.constraint.ConstraintLayout;
 import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
@@ -16,11 +17,9 @@ public class TerroristSlider extends PagerAdapter {
     LayoutInflater inflater;
 
     public int[] images_Slider = {
-            R.drawable.ic_person,
-            R.drawable.ic_person,
-            R.drawable.ic_person,
-            R.drawable.ic_person,
-            R.drawable.ic_person
+            R.drawable.terrorism1,
+            R.drawable.terrorism2,
+            R.drawable.terrorism3
     };
 
     public String [] title_Slider ={
@@ -55,12 +54,19 @@ public class TerroristSlider extends PagerAdapter {
         ImageView imgslide = (ImageView)  view.findViewById(R.id.imageView_Slider);
         TextView txttitle= (TextView) view.findViewById(R.id.textView_TitleSlider);
         TextView description = (TextView) view.findViewById(R.id.textView_DescriptionSlider);
+        layoutslide.setBackgroundColor(lst_backgroundcolor[position]);
         imgslide.setImageResource(images_Slider[position]);
         txttitle.setText(title_Slider[position]);
         description.setText(description_Slider[position]);
         container.addView(view);
         return view;
     }
+
+    public int[]  lst_backgroundcolor = {
+            Color.rgb(55,55,55),
+            Color.rgb(239,85,85),
+            Color.rgb(110,49,89)
+    };
 
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {
